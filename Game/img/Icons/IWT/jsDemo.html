@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Javascript prog</title>
+    <script type="text/javascript">
+        var name;
+        var n1;
+        var n2;
+        var num1; 
+        var num2;
+        var sum;
+        var marks;
+
+        var now = new Date();
+        var hour = now.getHours();
+
+        name = window.prompt("Please enter your name !");
+        n1 = window.prompt("Please enter first number !");
+        n2 = window.prompt("Please enter second number !");
+
+        marks = window.prompt("Please enter your marks !");
+        
+        //converting var to int
+        num1 = parseInt(n1);
+        num2 = parseInt(n2);
+
+        sum = num1+num2;
+
+        //time
+        if (hour <12) {
+            document.write("<h1>Good Morning</h1>");
+        }
+        if (hour >= 12) {
+            hour = hour - 12;
+            if(hour < 6) document.write("<h1>Good Afternoon</h1>")
+            if(hour >= 6) document.write("<h1>Good Evening</h1>")
+        }
+
+        document.write(marks>=60?true:false);
+
+
+        if (marks >=90) {
+            document.write("<p>A<p>");
+        }
+        else
+        {
+            if (marks>=80) {
+                document.write("<p>B<p>");
+            }
+            if (marks>=70) {
+                document.write("<p>C<p>");
+            }
+            if (marks>=60) {
+                document.write("<p>D<p>");
+            }
+            else
+            {
+                document.write("<p>F<p>");
+            }
+        }
+
+        var fact;
+        parseInt(fact)=1;
+        for (let index = 0; index < n1; index++) {
+            fact = fact*index;
+        }
+        document.write(fact);
+
+        document.write('<h1 style = "color: magenta">');
+        document.write("Welcome to javascript"+ " programming !\n"+ name + "</h1>");
+        document.writeln("<h1>The sum is " + sum + " </h1>");
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, suscipit.</p>
+</body>
+</html>
